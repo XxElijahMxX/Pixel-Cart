@@ -1,9 +1,11 @@
-
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header/header";
 
 function App() {
   return (
-    <h1>Pixel Cart</h1>
+    <div className="app">
+      <Header />
+    </div>
   );
 }
 
