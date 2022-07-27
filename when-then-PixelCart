@@ -1,0 +1,46 @@
+
+
+AS a full stack web developer building an online video game retail store named Pixel-Cart
+I WANT my store to use Mongo Db, Mongoose, React, Graph QL,
+SO THAT products can be altered as an administrator, or purchased as a customer
+
+---------------------------------------------------------------------------------------------
+
+AS an administrator,
+WHEN I have a product,
+THEN I can ADD, UPDATE, DELETE a product
+
+WHEN I want to view past purchases
+THEN I have access to view all purchased items and charges
+
+---------------------------------------------------------------------------------------------
+
+AS shopper
+WHEN I view a product
+THEN I see a picture of the product, the price of the product 
+
+WHEN I create an account
+THEN I have the ability to purchase products from Pixel-Cart
+
+WHEN I add a product to my checkout cart
+THEN I am able to purchase the product, or remove it from my cart
+
+WHEN I checkout 
+THEN I enter my address information and payment option and information
+
+---------------------------------------------------------------------------------------------
+
+Possible options in a future version,
+
+AS an administrator 
+WHEN I access the reviews
+THEN  I have the ability to view, and delete any reviews
+
+As a customer
+WHEN I want to review a product
+THEN I am able to write and submit a review
+
+WHEN I want to see past reviews on products
+THEN I can see all past reviews on products
+
+
