@@ -61,6 +61,13 @@ function Home() {
             image="https://upload.wikimedia.org/wikipedia/commons/d/d1/GameCube-Set.jpg"
             review={5}
           />
+          <Product
+            id="07"
+            title="Xbox"
+            price={59.99}
+            image="https://m.media-amazon.com/images/I/41oALMHapnL.jpg"
+            review={4}
+          />
         </div>
       </div>
     </div>
