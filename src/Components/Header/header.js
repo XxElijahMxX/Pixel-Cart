@@ -3,18 +3,15 @@ import "./header.css";
 import Logo from "../../Images/Pixel Cart.png";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-<<<<<<< HEAD
 import { useStateValue } from "../StateProvider/StateProvider";
-=======
 import { Link } from "react-router-dom";
->>>>>>> 073f7591e218d031f5addb540dfdb8fa42077adb
 
 function Header() {
   const [{ basket }, dispatch] = useStateValue();
 
   return (
     <div className="header">
-      <Link reloadDocument to="/">
+      <Link to="/">
         <img className="header__logo" src={Logo} alt="this the logo" />
       </Link>
 
@@ -24,7 +21,7 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link reloadDocument to="/login">
+        <Link to="/login">
           <div className="header__option">
             <span className="header__optionLineOne">Hello Guest</span>
             <span className="header__optionLineTwo">Sign In</span>
@@ -35,7 +32,9 @@ function Header() {
           <span className="header__optionLineTwo">& Orders</span>
         </div>
         <div className="header_optionBasket">
-          <ShoppingCartIcon />
+          <Link to="/checkout">
+            <ShoppingCartIcon />
+          </Link>
           <span
             className="header__optionLineTwo 
           header__cartCount"
