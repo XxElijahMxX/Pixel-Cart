@@ -14,7 +14,7 @@ function Checkout() {
       <div className="checkout_left">
         <img
           className="checkout_ad"
-          src="https://via.placeholder.com/1920x100?text=Banner+Ad+Placeholder"
+          src="https://www.relativisticramblings.com/wp-content/uploads/2016/07/1370965449-the-legend-of-zelda-the-wind-waker-hd-e1468358036334.jpg"
           alt="banner ad"
         />
         <div className="checkout_title">

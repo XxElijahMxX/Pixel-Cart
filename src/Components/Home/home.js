@@ -69,6 +69,16 @@ function Home() {
             review={4}
           />
         </div>
+
+        <div className="home__row">
+          <Product
+            id="08"
+            title="Super Nintendo"
+            price={49.99}
+            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmRs5u8pls4W9nWqQWjcLE_1eYru6zQFuBpA&usqp=CAU"
+            review={5}
+          />
+        </div>
       </div>
     </div>
   );
