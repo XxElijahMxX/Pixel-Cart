@@ -3,14 +3,20 @@ import "./header.css";
 import Logo from "../../Images/Pixel Cart.png";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+<<<<<<< HEAD
 import { useStateValue } from "../StateProvider/StateProvider";
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 073f7591e218d031f5addb540dfdb8fa42077adb
 
 function Header() {
   const [{ basket }, dispatch] = useStateValue();
 
   return (
     <div className="header">
-      <img className="header__logo" src={Logo} alt="this the logo" />
+      <Link reloadDocument to="/">
+        <img className="header__logo" src={Logo} alt="this the logo" />
+      </Link>
 
       <div className="header__search">
         <input className="header__searchInput" type="text" />
@@ -18,10 +24,12 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
-        </div>
+        <Link reloadDocument to="/login">
+          <div className="header__option">
+            <span className="header__optionLineOne">Hello Guest</span>
+            <span className="header__optionLineTwo">Sign In</span>
+          </div>
+        </Link>
         <div className="header__option">
           <span className="header__optionLineOne">Returns</span>
           <span className="header__optionLineTwo">& Orders</span>
