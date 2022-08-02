@@ -3,8 +3,11 @@ import "./header.css";
 import Logo from "../../Images/Pixel Cart.png";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useStateValue } from "../StateProvider/StateProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <img className="header__logo" src={Logo} alt="this the logo" />
@@ -29,7 +32,7 @@ function Header() {
             className="header__optionLineTwo 
           header__cartCount"
           >
-            0
+            {basket?.length}
           </span>
         </div>
       </div>
