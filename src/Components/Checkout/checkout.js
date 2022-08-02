@@ -13,7 +13,7 @@ function Checkout() {
           alt="banner ad"
         />
         <div className="checkout_title">
-          <h2> Your Shopping Basket</h2>
+          <h2> Your Shopping Cart</h2>
           {/* Basket Item */}
           {/* Basket Item */}
           {/* Basket Item */}
