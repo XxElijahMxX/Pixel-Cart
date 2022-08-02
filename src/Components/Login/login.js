@@ -27,7 +27,7 @@ function Login() {
           Welcome to our site and we hope you find everything your looking for.
         </p>
 
-        <button>Create a Pixel Cart Account</button>
+        <button className="registerButton">Create a Pixel Cart Account</button>
       </div>
     </div>
   );
