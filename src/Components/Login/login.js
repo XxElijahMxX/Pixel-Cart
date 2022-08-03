@@ -28,7 +28,7 @@ function Login() {
       .then((auth) => {
         console.log(auth);
         if (auth) {
-          history.push("/");
+          history("/");
         }
       })
       .catch((error) => alert(error.message));
