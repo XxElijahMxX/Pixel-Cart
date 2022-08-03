@@ -47,6 +47,7 @@ function App() {
               </div>
             }
           />
+
           <Route path="/login" element={<Login />} />
 
           <Route
