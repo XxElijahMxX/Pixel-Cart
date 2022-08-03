@@ -15,7 +15,9 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history.push("/");
+        if (auth) {
+          history("/");
+        }
       })
       .catch((error) => alert(error.message));
   };
@@ -28,7 +30,7 @@ function Login() {
       .then((auth) => {
         console.log(auth);
         if (auth) {
-          history.push("/");
+          history("/");
         }
       })
       .catch((error) => alert(error.message));
