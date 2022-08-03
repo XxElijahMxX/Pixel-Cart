@@ -19,8 +19,17 @@ function App() {
 
       if (authUser) {
         // the user user logged in/ the user was already logged in
+
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
       } else {
         // the user was logged out
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
       }
     });
   }, []);
