@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./login.css";
 import Logo from "../../Images/Pixel Cart.png";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 
 function Login() {
-  const history = useHistory();
+  const history = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

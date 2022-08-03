@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./Components/Header/header";
 import Home from "./Components/Home/home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkout from "./Components/Checkout/checkout";
 import Login from "./Components/Login/login";
 import { useEffect } from "react";
@@ -27,19 +27,29 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/checkout">
-            <Header />
-            <Checkout />
-          </Route>
-          <Route path="/">
-            <Header />
-            <Home />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+
+          <Route
+            path="/checkout"
+            element={
+              <div>
+                <Header />
+                <Checkout />
+              </div>
+            }
+          />
+
+          <Route
+            path="/"
+            element={
+              <div>
+                <Header />
+                <Home />
+              </div>
+            }
+          />
+        </Routes>
       </div>
     </Router>
   );
