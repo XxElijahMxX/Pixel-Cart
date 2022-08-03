@@ -1,7 +1,16 @@
+const Product = require("../models/Product");
+
 const resolvers = {
   Query: {
-    helloWorld: () => {
-      return "Hello world!";
+    products: async () => {
+      return Product.find();
+    },
+  },
+  Mutation: {
+    addProduct: async (parent, args) => {
+      const product = Product.create(args);
+
+      return product;
     },
   },
 };
