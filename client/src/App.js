@@ -9,6 +9,22 @@ import { auth } from "./firebase";
 import { useStateValue } from "./Components/StateProvider/StateProvider";
 import Payment from "./Components/Payment/Payment";
 
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+
+const httpLink = createHttpLink({
+  uri: "http://localhost:3001/graphql",
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
+
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -35,43 +51,45 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="app">
-        <Routes>
-          <Route
-            path="/payment"
-            element={
-              <div>
-                <Header />
-                <Payment />
-              </div>
-            }
-          />
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="app">
+          <Routes>
+            <Route
+              path="/payment"
+              element={
+                <div>
+                  <Header />
+                  <Payment />
+                </div>
+              }
+            />
 
-          <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
-          <Route
-            path="/checkout"
-            element={
-              <div>
-                <Header />
-                <Checkout />
-              </div>
-            }
-          />
+            <Route
+              path="/checkout"
+              element={
+                <div>
+                  <Header />
+                  <Checkout />
+                </div>
+              }
+            />
 
-          <Route
-            path="/"
-            element={
-              <div>
-                <Header />
-                <Home />
-              </div>
-            }
-          />
-        </Routes>
-      </div>
-    </Router>
+            <Route
+              path="/"
+              element={
+                <div>
+                  <Header />
+                  <Home />
+                </div>
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
+    </ApolloProvider>
   );
 }
 

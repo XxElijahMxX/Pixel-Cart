@@ -27,3 +27,24 @@ const typeDefs = gql`
 
 // export the typeDefs
 module.exports = typeDefs;
+
+//Get all products query
+// query getProducts{
+//     products {
+//       _id
+//       title
+//       image
+//       price
+//       review
+//     }
+//   }
+//
+// Add product mutation
+// mutation addProduct($title: String!, $image: String!, $review: Int!, $price: Float!) {addProduct(title: $title, image: $image, price: $price, review: $review) {
+//     _id
+//     title
+//     price
+//     review
+//     image
+//   }
+//   }

@@ -1,8 +1,15 @@
 import React from "react";
 import Product from "../Product/product";
 import "./home.css";
+import { useQuery } from "@apollo/client";
+import { QUERY_PRODUCTS } from "../../utils/queries";
 
-function Home() {
+function Home({}) {
+  // use useQuery hook to make query request
+  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const products = data?.products || [];
+  console.log(products);
+
   return (
     <div className="home">
       <div className="home__container">
@@ -13,7 +20,17 @@ function Home() {
         />
 
         <div className="home__row">
-          <Product
+          {products.map((product) => (
+            <Product
+              id={product._id}
+              title={product.title}
+              price={product.price}
+              image={product.image}
+              review={product.review}
+            />
+          ))}
+
+          {/* <Product
             id="01"
             title="Nintendo 64"
             price={99.99}
@@ -77,7 +94,7 @@ function Home() {
             price={49.99}
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmRs5u8pls4W9nWqQWjcLE_1eYru6zQFuBpA&usqp=CAU"
             review={5}
-          />
+          /> */}
         </div>
       </div>
     </div>
