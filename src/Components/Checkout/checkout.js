@@ -4,10 +4,9 @@ import "./checkout.css";
 import Subtotal from "../Subtotal/subtotal";
 import { useStateValue } from "../StateProvider/StateProvider";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
-import { InsertEmoticon } from "@mui/icons-material";
 
 function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <div className="checkout">
@@ -17,6 +16,9 @@ function Checkout() {
           src="https://www.relativisticramblings.com/wp-content/uploads/2016/07/1370965449-the-legend-of-zelda-the-wind-waker-hd-e1468358036334.jpg"
           alt="banner ad"
         />
+        <div>
+          <h3>Hello, {user?.email}</h3>
+        </div>
         <div className="checkout_title">
           <h2> Your Shopping Cart</h2>
 
