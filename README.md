@@ -20,8 +20,7 @@ Author:  XxElijahMxX MWright98 MrPerry365
 ## Screenshot
 <img src= "src/Images/pixel-cart-screenshot.png">
 
-## Demonstration Video
-https://drive.google.com/file/d/1rq0Sg3dePahl0XWvJfQdYzR9K1vfriPC/view
+
 ## Installation
 clone the repository and use [npm i] to install the dependencies
 
@@ -34,8 +33,6 @@ XxElijahMxX MWright98 MrPerry365
 ## License
 ### MIT
 ### link: (https://opensource.org/licenses/MIT)
-
-## Test
 
 
 
