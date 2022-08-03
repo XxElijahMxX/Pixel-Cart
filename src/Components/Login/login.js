@@ -15,13 +15,9 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-<<<<<<< HEAD
         if (auth) {
           history("/");
         }
-=======
-        history("/");
->>>>>>> 3d5275a5c6a55390b35f56e089a01b516f3c823a
       })
       .catch((error) => alert(error.message));
   };
