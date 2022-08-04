@@ -24,10 +24,8 @@ import Checkout from "./Components/Checkout/checkout";
 import Login from "./Components/Login/login";
 import Payment from "./Components/Payment/Payment";
 
-
-
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "http://localhost:3001/graphql",
 });
 
 const client = new ApolloClient({
