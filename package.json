@@ -1,5 +1,6 @@
 {
   "name": "pixel-cart",
+<<<<<<< HEAD
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,28 +20,30 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+=======
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+>>>>>>> c6d9e5958a15078b9f33d5bfa37dafdda8196c41
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "start": "node server/server.js",
+  "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+  "install": "cd server && npm i && cd ../client && npm i",
+  "seed": "cd server && npm run seed",
+"build": "cd client && npm run build"
+},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:XxElijahMxX/Pixel-Cart.git"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XxElijahMxX/Pixel-Cart/issues"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "homepage": "https://github.com/XxElijahMxX/Pixel-Cart#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
   }
 }

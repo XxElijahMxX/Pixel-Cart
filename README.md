@@ -1,5 +1,5 @@
+# Pixel-Cart
 
-  # Pixel-Cart
 ## This is an online store specializing in video games and video game accessories
   
 ## Badge: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
