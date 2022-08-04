@@ -16,35 +16,11 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProduct(
-      title: String!
-      image: String!
-      price: Float!
-      review: Int!
-    ): Product
+    addProduct(title: String! image: String! price: Float! review: Int!): Product
+    removeProduct(id: String!): Product
   }
 `;
 
 // export the typeDefs
 module.exports = typeDefs;
 
-//Get all products query
-// query getProducts{
-//     products {
-//       _id
-//       title
-//       image
-//       price
-//       review
-//     }
-//   }
-//
-// Add product mutation
-// mutation addProduct($title: String!, $image: String!, $review: Int!, $price: Float!) {addProduct(title: $title, image: $image, price: $price, review: $review) {
-//     _id
-//     title
-//     price
-//     review
-//     image
-//   }
-//   }
