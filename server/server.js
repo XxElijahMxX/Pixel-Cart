@@ -14,8 +14,6 @@ const server = new ApolloServer({
   resolvers,
 });
 
-
-
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
