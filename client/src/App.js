@@ -1,13 +1,11 @@
-import "./App.css";
-import Header from "./Components/Header/header";
-import Home from "./Components/Home/home";
+//import react stuff
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Checkout from "./Components/Checkout/checkout";
-import Login from "./Components/Login/login";
 import { useEffect } from "react";
+
 import { auth } from "./firebase";
+
 import { useStateValue } from "./Components/StateProvider/StateProvider";
-import Payment from "./Components/Payment/Payment";
 
 import {
   ApolloProvider,
@@ -16,8 +14,20 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
+//Import stylesheet
+import "./App.css";
+
+//Import components
+import Header from "./Components/Header/header";
+import Home from "./Components/Home/home";
+import Checkout from "./Components/Checkout/checkout";
+import Login from "./Components/Login/login";
+import Payment from "./Components/Payment/Payment";
+
+
+
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql:1",
+  uri: "/graphql",
 });
 
 const client = new ApolloClient({
