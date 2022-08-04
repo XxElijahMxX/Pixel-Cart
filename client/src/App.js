@@ -27,7 +27,7 @@ import Payment from "./Components/Payment/Payment";
 
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "http://localhost:3001/graphql",
 });
 
 const client = new ApolloClient({
@@ -50,12 +50,16 @@ function App() {
           type: "SET_USER",
           user: authUser,
         });
+        dispatch({
+          type: "LOAD_PREVIOUS_BASKET"
+        });
       } else {
         // the user was logged out
         dispatch({
           type: "SET_USER",
           user: null,
         });
+
       }
     });
   }, []);
