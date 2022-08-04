@@ -7,12 +7,13 @@ import { useNavigate } from "react-router";
 function Subtotal() {
   const [{ basket }] = useStateValue();
   const history = useNavigate();
-
+  const subtotal = getBasketTotal(basket);
+  
   return (
     <div className="subtotal">
       <p>
         Subtotal ({basket.length} items){" "}
-        <strong>${getBasketTotal(basket)}</strong>
+        <strong>${subtotal.toFixed(2)}</strong>
       </p>
       <small className="subtotal_gift">
         <input type="checkbox" /> This order contains a gift
