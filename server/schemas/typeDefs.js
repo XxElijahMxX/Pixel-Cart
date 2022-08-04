@@ -17,7 +17,7 @@ const typeDefs = gql`
 
   type Mutation {
     addProduct(title: String! image: String! price: Float! review: Int!): Product
-    removeProduct(id: String!): Product
+    removeProduct(_id: String!): Product
   }
 `;
 

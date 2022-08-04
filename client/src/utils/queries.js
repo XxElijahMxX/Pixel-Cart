@@ -11,3 +11,16 @@ export const QUERY_PRODUCTS = gql`
     }
   }
 `;
+
+
+//Remove product mutation
+// mutation removeProduct($id: String!) {removeProduct(id: $id) {
+//     _id
+//     title
+//     price
+//     review
+//     image
+//   }
+//   }
+  
+  

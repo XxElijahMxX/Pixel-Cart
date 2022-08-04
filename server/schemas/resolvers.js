@@ -13,7 +13,7 @@ const resolvers = {
       return product;
     },
     removeProduct: async (parent, args) => {
-        const product = Product.deleteOne(args._id)
+        const product = Product.deleteOne({_id: {$eq: args._id}})
 
         return product;
     }
