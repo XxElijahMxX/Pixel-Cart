@@ -48,12 +48,16 @@ function App() {
           type: "SET_USER",
           user: authUser,
         });
+        dispatch({
+          type: "LOAD_PREVIOUS_BASKET"
+        });
       } else {
         // the user was logged out
         dispatch({
           type: "SET_USER",
           user: null,
         });
+
       }
     });
   }, []);

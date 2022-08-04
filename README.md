@@ -2,46 +2,56 @@
 
 ## This is an online store specializing in video games and video game accessories
   
-## Badge: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
-
-Author:  XxElijahMxX MWright98 MrPerry365
+Authors:  XxElijahMxX MWright98 MrPerry365
 
 ## Table of Contents:
-- [username](#username),
-- [profile](#profile),
-- [installation](#installation),
-- [usage](#usage),
-- [license](#license),
-- [contributors](#contributors),
-- [test](#test),
-- [author](#author),
-- [questions](#questions),
+- [Deployment](#deployment)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [License](#license)
+- [Questions](#questions)
 
 ## Screenshot
-<img src= "src/Images/pixel-cart-screenshot.png">
+![siteScreenshot](https://user-images.githubusercontent.com/63832314/182749967-1b157f4f-3954-4ba2-9789-38aa68daa68a.png)
 
+## Deployment 
+Site is deployed at https://pixel-cart.herokuapp.com/ 
 
 ## Installation
-clone the repository and use [npm i] to install the dependencies
+Clone repository 
+
+In root folder run `npm install`
+
+In root folder run `npm run seed`
+
+In root folder run `npm run develop`
+
+Append /client/src/App.js http link from '/graphql/ to 'http://localhost:3001/graphql'
+
+Enjoy!
 
 ## Usage
 As the owner of the site and or products you can make money. As a customer you can spend money to obtain the goods
+
+Local users should have a knowledge of MongoDB, Express.JS, React, and Node.js
 
 ## Contributors
 XxElijahMxX MWright98 MrPerry365
 
 ## License
-### MIT
-### link: (https://opensource.org/licenses/MIT)
+ ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+ 
+ `https://opensource.org/licenses/MIT`
 
 
 
 ## Questions
 ### If you have any questions, contact me at:
 
-#### GitHub Username: [XxElijahMxX MWright98 MrPerry365]
+#### GitHub Usernames: XxElijahMxX, MWright98, MrPerry365
 
-#### GitHub Profile: [https://github.com/XxElijahMxX/Pixel-Cart.git]
+
 
 
 

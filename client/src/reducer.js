@@ -7,18 +7,46 @@ export const initialState = {
 export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => item.price + amount, 0);
 
+const updateLocalStorage = (key, data) => {
+  localStorage.setItem(key, JSON.stringify(data));
+};
+
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
+    case "LOAD_PREVIOUS_BASKET":
+      //CHECK LOCAL STORAGE FOR DATA
+      const existingBasketStringified = localStorage.getItem("basket");
+
+      //IF DATA THEN LOAD BASKET
+      if (existingBasketStringified) {
+        return {
+          ...state,
+          basket: JSON.parse(existingBasketStringified),
+        };
+      } else {
+        //return existing state
+        return {
+          ...state,
+        };
+      }
+
     //Add to basket handler
     case "ADD_TO_BASKET":
+      //CREATE UPDATED BASKET ARRAY
+      const basket = [...state.basket, action.item];
+
+      //UPDATE LOCAL STORAGE
+      updateLocalStorage("basket", basket);
+
+      //UPDATE APPLICATION STATE
       return {
         ...state,
-        basket: [...state.basket, action.item],
+        basket: basket,
       };
 
     //remove from basket handler
-    case "REMOVE_FROM_CART":
+    case "REMOVE_FROM_BASKET":
       const index = state.basket.findIndex(
         (cartItem) => cartItem.id === action.id
       );
@@ -32,6 +60,8 @@ const reducer = (state, action) => {
           `Can't remove product (id: ${action.id}) as it isn't in the cart`
         );
       }
+      //UPDATE LOCAL STORAGE
+      updateLocalStorage("basket", newBasket);
 
       return {
         ...state,

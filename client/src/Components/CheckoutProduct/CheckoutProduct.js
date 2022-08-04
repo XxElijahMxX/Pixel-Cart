@@ -7,7 +7,7 @@ function CheckoutProduct(props) {
   const [{}, dispatch] = useStateValue();
   const removeFromCart = () => {
     dispatch({
-      type: "REMOVE_FROM_CART",
+      type: "REMOVE_FROM_BASKET",
       id: id,
     });
   };
